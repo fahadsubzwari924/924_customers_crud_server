@@ -39,11 +39,12 @@ const fetch = async (req, res) => {
         if (createdAt) {
             sortParams['createdAt'] = createdAt;
         }
+        if (createdAt) {
+            sortParams['name'] = name;
+        }
+
 
         /* Creating filter object based on query params based on name and email field */
-        if (name) {
-            filters.name = { $regex: name, $options: 'i' };
-        }
         if (email) {
             filters.email = { $regex: email, $options: 'i' };
         }

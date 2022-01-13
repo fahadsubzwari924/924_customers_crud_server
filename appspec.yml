@@ -1,0 +1,21 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/be
+permissions:
+  - object: /home/ubuntu
+    owner: ubuntu
+    group: ubuntu
+    type:
+      - directory
+  - object: /home/ubuntu
+    owner: ubuntu
+    group: ubuntu
+    type:
+      - file
+hooks:
+  AfterInstall:
+    - location: ./deploy-be.sh
+      runas: ubuntu
+      timeout: 120
