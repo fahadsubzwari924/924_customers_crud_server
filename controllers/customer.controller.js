@@ -39,7 +39,7 @@ const fetch = async (req, res) => {
         if (createdAt) {
             sortParams['createdAt'] = createdAt;
         }
-        if (createdAt) {
+        if (name) {
             sortParams['name'] = name;
         }
 
