@@ -4,13 +4,35 @@ services:
     image: mongo
     ports:
       - 27017:27017
+    networks:
+      finlex:
+        aliases:
+          - mongo.local
     volumes:
-      - mongodata:/var/lib/mongo
-  service:
+      - mongodata:/data/db
+
+  server:
     build:
       context: .
+    ports:
+      - 3003:3003
+    networks:
+      - finlex
     depends_on:
       - mongo
+    volumes:
+      - ./:/app/node
+
+  ui:
+    build:
+      context: ../924_customer_crud_client
+    ports:
+      - 4200:4200
+    volumes:
+      - ../924_customer_crud_client/src:/myApp/src
+
+networks:
+  finlex:
 
 volumes:
   mongodata:
