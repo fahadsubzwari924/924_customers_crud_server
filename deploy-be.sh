@@ -7,4 +7,4 @@ rm -rf node_modules
 npm i
 
 pm2 delete be 2> /dev/null
-pm2 start ./app.js --name be
+DB_HOST=localhost:27017 pm2 start ./app.js --name be
