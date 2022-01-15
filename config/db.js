@@ -9,7 +9,7 @@ mongoose.connect(mongoURI).then(() => {
     console.log('DB connected!')
 })
 .catch((err) => {
-    console.log(error);
+    console.log(err);
 })
 
 // const db = mongoose.createConnection(

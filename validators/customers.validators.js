@@ -8,9 +8,7 @@ const createCustomer = () => {
             .isLength({ min: 3, max: 30}).withMessage('Name should be between 3-30 characters'),
         body('email')
             .notEmpty().withMessage('Name is required')
-            .isEmail(),
-        body('age')
-            .isNumeric()
+            .isEmail()
     ]
 }
 
