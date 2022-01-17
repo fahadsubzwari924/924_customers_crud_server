@@ -93,6 +93,8 @@ Unit tests are only implemented in front-end application.
 # Technology used in server application
 -	Node.js with express framework.
 -	MongoDB with mongoose ODM
+-	Docker for containerization
+-	Aws CodeDeploy and Github Actions for CI/CD
 
 
 # Note
