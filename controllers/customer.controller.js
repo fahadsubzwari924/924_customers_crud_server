@@ -2,7 +2,6 @@ const DAL = require('../services/dal.service');
 const model = require('../models/customers.model');
 const { checkIfExists, IsObjectEmpty } = require('../helpers/util.helper');
 const responseUtil = require('../helpers/response.helper');
-const collections = require('../constants/collections.constant');
 
 
 /** This function is creating new customer in db **/

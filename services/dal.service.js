@@ -131,12 +131,5 @@ exports.remove = (model, query) => {
         } catch (error) {
             reject(error);
         }
-        // model.remove(query, function (error, doc) {
-        //     if (error) {
-        //         reject(error);
-        //     } else {
-        //         resolve(doc);
-        //     }
-        // });
     });
 }

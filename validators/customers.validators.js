@@ -4,11 +4,13 @@ const createCustomer = () => {
     return [
         body('name')
             .notEmpty().withMessage('Name is required')
-            .isString().withMessage('Name must be text not numbers')
+            .isString().withMessage('Name should be text')
             .isLength({ min: 3, max: 30}).withMessage('Name should be between 3-30 characters'),
         body('email')
             .notEmpty().withMessage('Name is required')
-            .isEmail()
+            .isEmail(),
+        body('age')
+            .isNumeric().withMessage('age should be numeric')
     ]
 }
 

@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-const collections = require('../constants/collections.constant');
 
 
 /* Customers Schema definition*/
