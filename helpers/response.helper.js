@@ -10,7 +10,6 @@ exports.sendCreated = res => {
 };
 
 exports.sendUpdated = res => {
-  //check status code for update
   return res.status(201).send({ success: true });
 };
 
